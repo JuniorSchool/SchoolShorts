@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head(title)">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title th:replace="${title}">BaseLayout Template</title>
+            <style type="text/css" media="screen">@import url("css/layout.css");</style>
+    </head>
+    <body th:fragment="body(content)">
+        <div class="cssWrapper" id="cssWrapper">
+            <div class="cssHeader" id="cssHeader1">
+                <div class="vertical-middle">
+                    <span th:replace="fragments/header :: header" />
+                </div>
+            </div>
+            <div class="cssHeader" id="cssHeader2">
+                <span th:replace="fragments/loginbar :: loginbar" />
+            </div>
+            <div class="cssGap" id="cssGapHeader">
+            </div>
+            <div class="cssCenter" id="cssCenter">
+                <div class="cssCenter" id="cssLeft">
+                    <span th:replace="fragments/menu :: menu" />
+                </div>
+                <div class="cssCenter" id="cssBody">
+                    <span th:replace="${content}">Content</span>
+                </div>
+                <div class="cssCenter" id="cssRight">
+                    <!-- This is the Right Sidebar -->
+                </div>
+            </div>
+            <div class="cssGap" id="cssGapFooter">
+            </div>
+            <div class="cssFooter" id="cssFooter2">
+                <div class="vertical-middle">
+                    <!--Legal Contact Privacy Policy-->
+                </div>
+            </div>
+            <div class="cssFooter" id="cssFooter1">
+                <div class="vertical-middle">
+                    <span th:replace="~{fragments/footer :: footer}" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

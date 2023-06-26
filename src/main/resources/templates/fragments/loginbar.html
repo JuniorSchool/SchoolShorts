@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+  
+    <span th:fragment="loginbar" align="right">
+                    <% if(request.getRemoteUser()==null) { %>
+                     Not logged-in &nbsp;<a href="loginLink" >Login</a>
+                     <% } else { %>
+                     Logged-in as: <%=request.getRemoteUser()%>&nbsp;<a href="logoutClicked">Logout</a>
+                     <% } %>
+    </span>
+  
+  </body>
+</html>
+
+
+
+
+

@@ -21,4 +21,18 @@ public class HelloWorldController {
         model.addAttribute("name", name);
         return "helloworld";
     }
+    
+    @GetMapping("/")
+    public String onGetIndex( Model model) {
+        //model.addAttribute("name", name);
+        return "index2";
+    }    
+
+    @GetMapping("/baseLayout")
+    public String onGetBaseLayout( Model model) {
+        //model.addAttribute("name", name);
+        return "baseLayout";
+    }    
+
+    
 }
