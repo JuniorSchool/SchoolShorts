@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author hamma
  */
 @Controller
-public class HelloWorldController {
+public class MainController {
 
     @GetMapping("/helloworld")
     public String onGet( Model model, @RequestParam(name="name", required=false, defaultValue="World") String name) {
@@ -25,7 +25,7 @@ public class HelloWorldController {
     @GetMapping("/")
     public String onGetIndex( Model model) {
         //model.addAttribute("name", name);
-        return "index2";
+        return "index_page";
     }    
 
     @GetMapping("/baseLayout")

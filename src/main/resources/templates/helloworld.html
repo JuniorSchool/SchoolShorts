@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="baseLayout :: head(~{::title})"> 
+<head th:replace="fragments/baseLayout :: head(~{::title})"> 
     <title>Getting Started: Serving Web Content</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <span th:replace="baseLayout :: body(~{::#content})">
+    <span th:replace="fragments/baseLayout :: body(~{::#content})">
     <p id="content" th:text="'Hello, ' + ${name} + '!'" />
     </span>
 </body>
