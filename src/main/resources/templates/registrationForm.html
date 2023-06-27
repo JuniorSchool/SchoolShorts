@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/baseLayout :: head(~{::title})"> 
+    <title>Registration Page</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <span th:replace="fragments/baseLayout :: body(~{::#content})">
+        <span id="content">
+            <div id="global" style="width:450px">
+                    <h3>Register New User</h3>
+                    <s:form action="ActionSupportTestPersistance">
+                        <s:textfield name="username" label="User Name" required="true" maxlength="16" size="16" /> 
+                        <s:password name="password" label="Password" required="true" maxlength="50" size="25" />
+                        <s:checkbox name="mailinglist" label="Include in Email Notifications"/>
+                            <s:textfield name="email" label="E-mail Address" maxlength="50" size="25" />
+                            <s:submit type="submit" label="Submit" /> <s:reset type="reset" label="Clear" />
+                    </s:form>
+            </div>                        
+        </span>
+    </span>
+</body>
+</html>
+
+

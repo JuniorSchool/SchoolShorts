@@ -28,11 +28,34 @@ public class MainController {
         return "index_page";
     }    
 
+/*
     @GetMapping("/baseLayout")
     public String onGetBaseLayout( Model model) {
         //model.addAttribute("name", name);
         return "baseLayout";
     }    
+*/
+  
+
+    @GetMapping("/login")
+    public String onGetLogin( Model model) {
+        //model.addAttribute("name", name);
+        return "loginForm";
+    }    
+
+/*    
+    @GetMapping("/logout")
+    public String onGetLogout( Model model) {
+        //model.addAttribute("name", name);
+        return "logoutForm";
+    }        
+*/
+    
+    @GetMapping("/register")
+    public String onGetRegister( Model model) {
+        //model.addAttribute("name", name);
+        return "registrationForm";
+    }        
 
     
 }

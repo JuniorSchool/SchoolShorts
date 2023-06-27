@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
     <head th:fragment="head(title)">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
             <title th:replace="${title}">BaseLayout Template</title>
             <style type="text/css" media="screen">@import url("css/layout.css");</style>
+            <link rel="icon" href="favicon.ico">
     </head>
     <body th:fragment="body(content)">
         <div class="cssWrapper" id="cssWrapper">

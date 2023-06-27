@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
   <body>
   
-    <span th:fragment="loginbar" align="right">
-                    <% if(request.getRemoteUser()==null) { %>
-                     Not logged-in &nbsp;<a href="loginLink" >Login</a>
-                     <% } else { %>
-                     Logged-in as: <%=request.getRemoteUser()%>&nbsp;<a href="logoutClicked">Logout</a>
-                     <% } %>
+    <span th:fragment="loginbar" align="right">                    
+            <span sec:authorize="isAuthenticated()" align="right">
+              Logged-in as: <span sec:authentication="name"></span>&nbsp;<a th:href="@{logout}">Logout</a>
+            </span>
+            <span sec:authorize="isAnonymous()" align="right">
+              Not logged-in &nbsp;<a th:href="@{login}">Login</a>&nbsp;<a th:href="@{register}">Register</a>
+            </span>                     
     </span>
   
   </body>

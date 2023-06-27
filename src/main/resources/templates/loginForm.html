@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/baseLayout :: head(~{::title})"> 
+    <title>Login Page</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <span th:replace="fragments/baseLayout :: body(~{::#content})">
+        <span id="content">
+            <h2>Login</h2>
+            <form method="post" th:action="@{/login}">
+            <!--form name="loginform" method="post" action="j_security_check"-->     
+                <table border="0">
+                    <tr>
+                        <td>User Name</td><td><input name="username" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td><td><input name="password" type="password"/></td>
+                    </tr>
+                    <tr><td colspan="2">
+                            <span th:if="${param.error}">
+                                Invalid username and password.
+                            </span>
+                            <span th:if="${param.logout}">
+                                You have been logged out.
+                            </span>
+                        </td></tr>
+                    <tr><td><div align="right"><input name="submit" type="submit"/>&nbsp;
+                                <input name="reset" type="reset"/>&nbsp;
+                                <a href="/register">Register</a></div>
+                        </td>
+                    </tr>
+                </table>
+            </form>            
+        </span>
+    </span>
+</body>
+</html>
+
+
