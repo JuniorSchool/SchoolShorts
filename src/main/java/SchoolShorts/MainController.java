@@ -22,40 +22,53 @@ public class MainController {
         return "helloworld";
     }
     
-    @GetMapping("/")
+    @GetMapping(value={"/", "/home"})
     public String onGetIndex( Model model) {
         //model.addAttribute("name", name);
+//        if (true) 
+//          throw new RuntimeException("Test Exception");
         return "index_page";
     }    
 
-/*
-    @GetMapping("/baseLayout")
-    public String onGetBaseLayout( Model model) {
-        //model.addAttribute("name", name);
-        return "baseLayout";
-    }    
-*/
-  
 
     @GetMapping("/login")
     public String onGetLogin( Model model) {
         //model.addAttribute("name", name);
         return "loginForm";
     }    
-
-/*    
-    @GetMapping("/logout")
-    public String onGetLogout( Model model) {
-        //model.addAttribute("name", name);
-        return "logoutForm";
-    }        
-*/
-    
+   
     @GetMapping("/register")
     public String onGetRegister( Model model) {
         //model.addAttribute("name", name);
         return "registrationForm";
     }        
 
+/*
+    @GetMapping("/countingtable")
+    public String onGetCountingTable( Model model) {
+        //model.addAttribute("name", name);
+        if (true) 
+          throw new RuntimeException("Test Exception");
+        return "countingtable";
+    }        
+
+    @GetMapping("/timestable")
+    public String onGetTimesTable( Model model) {
+        //model.addAttribute("name", name);
+        return "timestable";
+    }        
     
+    @GetMapping("/randomtimestable")
+    public String onGetRandomTimesTable( Model model) {
+        //model.addAttribute("name", name);
+        return "randomtimestable";
+    }        
+    
+    @GetMapping("/drawingpage")
+    public String onGetDrawingPage( Model model) {
+        //model.addAttribute("name", name);
+        return "drawingpage";
+    }        
+*/
+
 }

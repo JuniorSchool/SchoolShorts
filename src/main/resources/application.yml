@@ -9,4 +9,11 @@ spring:
     driverClassName: "org.mariadb.jdbc.Driver"
 server:
   servlet:
-    contextPath: /schoolshorts    
+    contextPath: /schoolshorts
+  error:
+    whitelabel:
+      enabled: false
+    path: /error
+    includeMessage: always
+    includeStacktrace: always
+    includeException: true

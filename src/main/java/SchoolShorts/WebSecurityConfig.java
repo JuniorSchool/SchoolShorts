@@ -23,8 +23,13 @@ public class WebSecurityConfig {
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
 			.authorizeHttpRequests((requests) -> requests
-				.requestMatchers("/", "css/*", "favicon.ico",
-                                        "login", "logout", "register").permitAll()
+				.requestMatchers("/", "home", "css/*",
+                                        "favicon.ico",
+                                        "login", "logout", "/register", "js/*",
+                                        "pdf-js/*", "countingtable", "timestable",
+                                        "randomtimestable", "/error"
+                                        ).permitAll()
+                                
 				.anyRequest().authenticated()
 			)
 			.formLogin((form) -> form
