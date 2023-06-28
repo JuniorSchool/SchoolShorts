@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" >
   <body>
   
     <span th:fragment="menu">
@@ -151,7 +151,7 @@
                                         </ul>
                                 </li -->
                         </ul>
-                    <% if(request.isUserInRole("admin")) { %>
+                    <span sec:authorize="hasRole('admin')" >
                         <ul class="menu" id="adminmenu">
                                 <li style="font-size:140%;"><a href="adminemailformLink">Email Form</a>
                                         <!--ul>
@@ -173,8 +173,9 @@
                                         </ul>
                                 </li-->
                         </ul>                 
-                     <% } else { %>
-                     <% } %>
+                    </span>
+                    <span sec:authorize="isAnonymous()" >
+                    </span>
             </div>
 
     </span>

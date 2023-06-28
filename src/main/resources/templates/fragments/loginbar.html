@@ -4,7 +4,12 @@
   
     <span th:fragment="loginbar" align="right">                    
             <span sec:authorize="isAuthenticated()" align="right">
-              Logged-in as: <span sec:authentication="name"></span>&nbsp;<a th:href="@{logout}">Logout</a>
+              Logged-in as: <span sec:authentication="name"></span>&nbsp;   
+              <form method="POST" th:action="@{/logout}" class="inline">
+                <button type="submit" class="link-button">
+                  Logout
+                </button>
+              </form>
             </span>
             <span sec:authorize="isAnonymous()" align="right">
               Not logged-in &nbsp;<a th:href="@{login}">Login</a>&nbsp;<a th:href="@{register}">Register</a>

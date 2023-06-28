@@ -175,3 +175,38 @@ div {
   -webkit-background-clip: text;
   background-clip: text;
 }
+
+/* For Hyperlink Form input doing a Post request - Start */
+/*
+              <form method="POST" th:action="@{/logout}" class="inline">
+                <button type="submit" class="link-button">
+                  Logout
+                </button>
+              </form>
+*/
+.inline {
+  display: inline;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 100%;
+  font-weight: bold;
+  transition-duration: 0.4s;
+}
+.link-button:focus {
+  outline: none;
+  text-decoration: underline;
+}
+.link-button:active {
+  text-decoration: underline;
+}
+.link-button:hover {
+  background: none;
+  text-decoration: underline;
+}
+/* For Hyperlink Form input doing a Post request - End */
