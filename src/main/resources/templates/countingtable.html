@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/baseLayout :: head(~{::title})"> 
+    <title>Counting Tables Form</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div th:replace="fragments/baseLayout :: body(~{::#content})">
+
+        <div id="content">
+            <h3>Generate &quot;Counting-By&quot; Or Counting Tables</h3>        
+         
+            <form name="CountingTables" action="ServletPDFCountingTable" method="get">
+
+                <p>Count-by</p>
+                <input type="radio" id="2" name="countBy" value="2" checked="checked">
+                <label for="2">2</label>
+                <input type="radio" id="3" name="countBy" value="3">
+                <label for="3">3</label>
+                <input type="radio" id="4" name="countBy" value="4">
+                <label for="4">4</label>
+                <input type="radio" id="5" name="countBy" value="5">
+                <label for="5">5</label>                
+                <input type="radio" id="6" name="countBy" value="6">
+                <label for="6">6</label>
+                <input type="radio" id="7" name="countBy" value="7">
+                <label for="6">7</label>
+                <input type="radio" id="8" name="countBy" value="8">
+                <label for="8">8</label>
+                <input type="radio" id="9" name="countBy" value="9">
+                <label for="9">9</label>
+                <input type="radio" id="10" name="countBy" value="10">
+                <label for="10">10</label>    
+              <br/>
+                <p>Count-uptil</p>
+                <input type="radio" id="100" name="countUptil" value="100" checked="checked">
+                <label for="100">100</label>
+                <input type="radio" id="200" name="countUptil" value="200">
+                <label for="200">200</label>
+                <input type="radio" id="300" name="countUptil" value="300">
+                <label for="300">300</label>
+                <input type="radio" id="400" name="countUptil" value="400">
+                <label for="400">400</label>                
+              <br/>
+                <p>Show blanks</p>
+                <input type="radio" id="true" name="showBlanks" value="true" checked="checked">
+                <label for="true">Yes</label>
+                <input type="radio" id="false" name="showBlanks" value="false">
+                <label for="false">No</label>              
+              <br/>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>    
+        </div>
+    </div>
+</body>
+</html>

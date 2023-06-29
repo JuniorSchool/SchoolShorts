@@ -27,6 +27,7 @@ public class WebSecurityConfig {
                                         "favicon.ico",
                                         "login", "logout", "/register", "js/*",
                                         "pdf-js/*", "countingtable", "timestable",
+                                        "ServletPDFCountingTable",
                                         "randomtimestable", "/error"
                                         ).permitAll()
                                 

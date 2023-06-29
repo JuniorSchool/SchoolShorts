@@ -43,15 +43,8 @@ public class MainController {
         return "registrationForm";
     }        
 
-/*
-    @GetMapping("/countingtable")
-    public String onGetCountingTable( Model model) {
-        //model.addAttribute("name", name);
-        if (true) 
-          throw new RuntimeException("Test Exception");
-        return "countingtable";
-    }        
-
+    
+/*    
     @GetMapping("/timestable")
     public String onGetTimesTable( Model model) {
         //model.addAttribute("name", name);
