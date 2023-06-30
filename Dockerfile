@@ -16,4 +16,4 @@ RUN mvn -f /home/app/pom.xml clean package
 FROM openjdk:21-jdk-slim
 COPY --from=build /home/app/target/SchoolShorts-0.0.1-SNAPSHOT.jar /usr/local/lib/schoolshorts.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/usr/local/lib/schoolshorts.jar.jar"]
+ENTRYPOINT ["java","-jar","/usr/local/lib/schoolshorts.jar"]
