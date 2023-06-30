@@ -78,5 +78,6 @@ OR\
 Some links are protected by Spring-Security and need authorization. Developement/Testing user details are as follows:\
 UserID: user\
 Password: password\
+.
 
 
