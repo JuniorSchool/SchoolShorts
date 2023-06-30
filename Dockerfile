@@ -13,8 +13,10 @@ RUN mvn -f /home/app/pom.xml clean package
 #
 # Package stage
 #
-FROM openjdk:22-slim
-ENV CONTEXT_PATH=/
+#FROM openjdk:22-slim
+FROM FROM eclipse-temurin:20-jre
+#ENV CONTEXT_PATH=/
 COPY --from=build /home/app/target/SchoolShorts-0.0.1-SNAPSHOT.jar /usr/local/lib/schoolshorts.jar
 EXPOSE 8080
-ENTRYPOINT java -jar /usr/local/lib/schoolshorts.jar --server.servlet.context-path=${CONTEXT_PATH}
+#ENTRYPOINT java -jar /usr/local/lib/schoolshorts.jar --server.servlet.context-path=${CONTEXT_PATH
+ENTRYPOINT java -jar /usr/local/lib/schoolshorts.jar
