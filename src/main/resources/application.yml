@@ -1,15 +1,15 @@
 ## YAML Template.
 ---
-spring:
-  datasource:
-    url: "jdbc:mariadb://192.168.0.10:55408/schoolwebdb"
-    username: "schoolwebuser"
-    password: "abcdef89"
-    ##password: "failtest"
-    driverClassName: "org.mariadb.jdbc.Driver"
+#spring:
+#  datasource:
+#    url: "jdbc:mariadb://192.168.0.10:55408/schoolwebdb"
+#    username: "schoolwebuser"
+#    password: "abcdef89"
+#    ##password: "failtest"
+#    driverClassName: "org.mariadb.jdbc.Driver"
 server:
   servlet:
-    contextPath: /schoolshorts
+    contextPath: /
   error:
     whitelabel:
       enabled: false
