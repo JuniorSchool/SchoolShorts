@@ -15,7 +15,7 @@
 	<name>SchoolShorts</name>
 	<description>School Shorts - Junior School Practice Stuff</description>
 	<properties>
-		<java.version>20</java.version>
+		<java.version>18</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
