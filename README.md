@@ -9,7 +9,7 @@ A re-coding of "SchoolHomework website" - a junior school home practice and game
 Application can be used in 2 ways:
 1. Either build it with Maven then run the JAR file, OR
 2. Run the pre-built OCI Container (Docker container) image.
-Both methods are discussed below:
+Both methods are discussed below.
 
 ## Using Maven to Build the JAR file
 OpenJDK18(or higher) and Maven should be already installed and accessible via Command Line. Use the following command in folder where you have downloaded this code and the 'pom.xml' file is located.
@@ -63,18 +63,19 @@ To Start it Again:
 sudo docker start schoolshorts01
 ```
 ## Open in Browser
-After launching the conatiner OR the Maven built JAR file, you can open a browser on the specified port and Context-Path. 
-For Example:
-[http://localhost:8080/](http://localhost:8080/) 
-OR
-[http://localhost/](http://localhost/)
-OR
-[http://localhost:8091/schoolshorts](http://localhost:8091/schoolshorts)
-OR
-[http://localhost:8080/myCustomContextPath](http://localhost:8080/myCustomContextPath)
+After launching the conatiner OR the Maven built JAR file, you can open a browser on the specified port and Context-Path.\
+For Example:\
+[http://localhost:8080/](http://localhost:8080/) \
+OR\
+[http://localhost/](http://localhost/) \
+OR\
+[http://localhost:8091/schoolshorts](http://localhost:8091/schoolshorts) \
+OR\
+[http://localhost:8080/myCustomContextPath](http://localhost:8080/myCustomContextPath) \
 
 ## Test User
-Some links are protected by Spring-Security and need authorization. Developement/Testing user details are as follows:
-UserID: user
-Password: password
+Some links are protected by Spring-Security and need authorization. Developement/Testing user details are as follows:\
+UserID: user\
+Password: password\
+
 
