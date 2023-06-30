@@ -1,9 +1,10 @@
 # School Shorts
-A re-coding of "SchoolHomework website" - a junior school home practice and games website, based on microservices architecture and Jakarta EE 10.
+A re-coding of the outdated "[SchoolHomework website](https://sourceforge.net/projects/schoolhomework/)" - a junior school home practice and games website, based on newer concepts microservices architecture and Jakarta EE.
 
-## Microservice Components
+## Microservice Components (When completed)
 1. School Shorts - 
-2. School Shorts Persistance API -
+2. SchoolDataAPI (Persistance API) -
+3. MariaDB Database Storage -
 
 ## Using the Application
 Application can be used in 2 ways:
@@ -36,9 +37,9 @@ sudo docker run --name schoolshorts01 -d -p 8080:8080 hammadrauf/schoolshorts
 OR
 sudo docker run --name schoolshorts01 -d -p 80:8080 hammadrauf/schoolshorts
 OR
-sudo docker run --name schoolshorts01 -d -p 8080:8080 hammadrauf/schoolshorts --env CONTEXT_PATH:/
+sudo docker run --name schoolshorts01 -d -p 8080:8080 --env CONTEXT_PATH:/ hammadrauf/schoolshorts
 OR
-sudo docker run --name schoolshorts01 -d -p 8080:8080 hammadrauf/schoolshorts --env CONTEXT_PATH:/myCustomContextPath
+sudo docker run --name schoolshorts01 -d -p 8080:8080 --env CONTEXT_PATH:/myCustomContextPath hammadrauf/schoolshorts 
 
 To Stop Docker Container:
 sudo docker stop schoolshorts01
@@ -52,9 +53,9 @@ sudo docker run --name schoolshorts01 -d -p 8080:8080 quay.io/hammadrauf/schools
 OR
 sudo docker run --name schoolshorts01 -d -p 80:8080 quay.io/hammadrauf/schoolshorts
 OR
-sudo docker run --name schoolshorts01 -d -p 8080:8080 quay.io/hammadrauf/schoolshorts --env CONTEXT_PATH:/
+sudo docker run --name schoolshorts01 -d -p 8080:8080 --env CONTEXT_PATH:/ quay.io/hammadrauf/schoolshorts
 OR
-sudo docker run --name schoolshorts01 -d -p 8080:8080 quay.io/hammadrauf/schoolshorts --env CONTEXT_PATH:/myCustomContextPath
+sudo docker run --name schoolshorts01 -d -p 8080:8080 --env CONTEXT_PATH:/myCustomContextPath quay.io/hammadrauf/schoolshorts
 
 To Stop Docker Container:
 sudo docker stop schoolshorts01
