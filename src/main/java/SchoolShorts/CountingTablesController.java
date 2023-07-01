@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class CountingTablesController {
     
   
-    @GetMapping("/countingtable")
+    @GetMapping("countingtable")
     public String onGetCountingTable( Model model) {
         return "countingtable";
     }        

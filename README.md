@@ -30,7 +30,7 @@ java -jar ./target/SchoolShorts-0.0.1-SNAPSHOT.jar --server.port=8091 --server.s
 ```
 
 ## Running the Containerized Version - DockerHub or Quay.io
-If you do not wish to use Maven and compile yourself then you may use the OCI Container image. You can run the Containerized version as follows.
+If you do not wish to use Maven and compile yourself then you may use the OCI Container image. You can run the Containerized version as follows. These instructions are assuming that you have Docker or Podman installed.
 ### From Docker Hub
 ```
 sudo docker run --name schoolshorts01 -d -p 8080:8080 hammadrauf/schoolshorts

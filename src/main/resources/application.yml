@@ -9,7 +9,7 @@
 #    driverClassName: "org.mariadb.jdbc.Driver"
 server:
   servlet:
-    contextPath: /
+    contextPath: /schoolshorts
   error:
     whitelabel:
       enabled: false

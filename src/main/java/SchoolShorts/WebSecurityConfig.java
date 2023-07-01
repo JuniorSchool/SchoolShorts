@@ -25,7 +25,7 @@ public class WebSecurityConfig {
 			.authorizeHttpRequests((requests) -> requests
 				.requestMatchers("/", "home", "css/*",
                                         "favicon.ico",
-                                        "login", "logout", "/register", "js/*",
+                                        "login", "logout", "register", "js/*",
                                         "pdf-js/*", "countingtable", "timestable",
                                         "ServletPDFCountingTable",
                                         "randomtimestable", "/error"

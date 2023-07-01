@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
 
-    @GetMapping("/helloworld")
+    @GetMapping("helloworld")
     public String onGet( Model model, @RequestParam(name="name", required=false, defaultValue="World") String name) {
         model.addAttribute("name", name);
         return "helloworld";
     }
     
-    @GetMapping(value={"/", "/home"})
+    @GetMapping(value={"/", "home"})
     public String onGetIndex( Model model) {
         //model.addAttribute("name", name);
 //        if (true) 
@@ -31,13 +31,13 @@ public class MainController {
     }    
 
 
-    @GetMapping("/login")
+    @GetMapping("login")
     public String onGetLogin( Model model) {
         //model.addAttribute("name", name);
         return "loginForm";
     }    
    
-    @GetMapping("/register")
+    @GetMapping("register")
     public String onGetRegister( Model model) {
         //model.addAttribute("name", name);
         return "registrationForm";
