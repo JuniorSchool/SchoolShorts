@@ -17,15 +17,17 @@
                     <tr>
                         <td>Password</td><td><input name="password" type="password"/></td>
                     </tr>
-                    <tr><td colspan="2">
-                            <span th:if="${param.error}">
+                    <tr><td colspan="2" />&nbsp;</td></tr>
+                    <tr><td colspan="2" style="text-align: center;">
+                            <span th:if="${param.error}" style="color: red; text-decoration-line: overline underline; font-weight: bold;">
                                 Invalid username and password.
                             </span>
-                            <span th:if="${param.logout}">
+                            <span th:if="${param.logout}" style="color: blue; text-decoration-line: overline underline; font-weight: bold;">
                                 You have been logged out.
                             </span>
                         </td></tr>
-                    <tr><td><div align="right"><input name="submit" type="submit"/>&nbsp;
+                    <tr><td colspan="2" />&nbsp;</td></tr>
+                    <tr><td colspan="2" style="text-align: center;"><div align="right"><input name="submit" type="submit"/>&nbsp;
                                 <input name="reset" type="reset"/>&nbsp;
                                 <a href="/register">Register</a></div>
                         </td>

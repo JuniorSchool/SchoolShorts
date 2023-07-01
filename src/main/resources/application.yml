@@ -8,6 +8,7 @@
 #    ##password: "failtest"
 #    driverClassName: "org.mariadb.jdbc.Driver"
 server:
+  forward-headers-strategy: framework
   tomcat:
     use-relative-redirects: true
   servlet:

@@ -62,10 +62,14 @@ public class ServletPDFCountingTable extends HttpServlet {
         if (request.getParameter("showBlanks")!=null) {
             showBlanks = BooleanUtils.toBoolean(request.getParameter("showBlanks"), "true", "false");
         }
+        boolean blanksShade = true;
+        if (request.getParameter("blanksShade")!=null) {
+            blanksShade = BooleanUtils.toBoolean(request.getParameter("blanksShade"), "true", "false");
+        }        
         String domain = request.getServerName();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try {
-            generatePDF(baos, domain, false, countBy, countUptil, showBlanks);
+            generatePDF(baos, domain, false, countBy, countUptil, showBlanks, blanksShade);
         } catch (DocumentException | NumberFormatException | IllegalStateException | IndexOutOfBoundsException | FileNotFoundException ex) {
             throw new IOException(ex.getMessage());
         }
@@ -86,7 +90,9 @@ public class ServletPDFCountingTable extends HttpServlet {
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
    
-    private void generatePDF(ByteArrayOutputStream baos, String domain, boolean borders, int countBy, int countUptil, boolean showBlanks)
+    private void generatePDF(ByteArrayOutputStream baos, String domain,
+            boolean borders, int countBy, int countUptil, boolean showBlanks,
+            boolean blanksShade)
             throws DocumentException, NumberFormatException,
             IllegalStateException, IndexOutOfBoundsException, FileNotFoundException {
         // step 1
@@ -118,7 +124,12 @@ public class ServletPDFCountingTable extends HttpServlet {
             cell = new PdfPCell(new Paragraph(((i%countBy)==0 & showBlanks)?" ":Integer.toString(i),((i%countBy)==0)?fontBold:fontNormal));
             cell.setBorder(borders ? PdfPCell.NO_BORDER : PdfPCell.BOX);
             if((i%countBy)==0) {
-                cell.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                if(blanksShade) {
+                    cell.setBackgroundColor(BaseColor.GRAY);
+                } else
+                {
+                    cell.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                }
             }
             cell.setHorizontalAlignment(PdfPCell.ALIGN_CENTER);
             cell.setVerticalAlignment(Element.ALIGN_MIDDLE);
