@@ -25,7 +25,9 @@ public class SchoolShortsApplication {
             return bean;
         }        
         
-        
+
+        /// Issue Reference link: https://github.com/spring-projects/spring-boot/issues/27801
+        /// server.tomcat.use-relative-redirects=true was not being honored
         @Bean
         @ConditionalOnProperty(value = "server.forward-headers-strategy", havingValue = "framework")
         FilterRegistrationBean<ForwardedHeaderFilter> customFilter() {
@@ -35,6 +37,7 @@ public class SchoolShortsApplication {
             registration.setDispatcherTypes(DispatcherType.REQUEST, DispatcherType.ASYNC, DispatcherType.ERROR);
             registration.setOrder(Ordered.HIGHEST_PRECEDENCE);
             return registration;
-        }        
+        } 
+
         
 }
