@@ -25,7 +25,7 @@ public class SchoolShortsApplication {
             return bean;
         }        
         
-
+/*
         /// Issue Reference link: https://github.com/spring-projects/spring-boot/issues/27801
         /// server.tomcat.use-relative-redirects=true was not being honored
         @Bean
@@ -38,6 +38,6 @@ public class SchoolShortsApplication {
             registration.setOrder(Ordered.HIGHEST_PRECEDENCE);
             return registration;
         } 
-
+*/
         
 }

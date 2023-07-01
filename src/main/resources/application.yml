@@ -8,15 +8,12 @@
 #    ##password: "failtest"
 #    driverClassName: "org.mariadb.jdbc.Driver"
 server:
-  address: 127.0.0.1
-  use-forward-headers: true
-  http2:
-    enabled: true
-  forward-headers-strategy: framework
+  useForwardHeaders: true
+  #forward-headers-strategy: framework
   tomcat:
-    use-relative-redirects: true
+    useRelativeRedirects: true
   servlet:
-    contextPath: /schoolshorts
+    contextPath: /schoolhw
   error:
     whitelabel:
       enabled: false
