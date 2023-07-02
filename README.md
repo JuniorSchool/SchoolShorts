@@ -81,6 +81,6 @@ UserID: user\
 Password: password\
 
 ## Deployed Instance URL
-The current version of the application is deployed at the following URL. Please note that it is still under development, not all functionality is currently available.\
+The current version of the application is deployed at the following URL. Please note that it is still under development, not all functionality is currently available. If you want to use this application then follow the following link.\
 [https://andromedabay.ddns.net/schoolshorts/](https://andromedabay.ddns.net/schoolshorts/) \
 
