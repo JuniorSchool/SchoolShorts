@@ -9,11 +9,11 @@
 #    driverClassName: "org.mariadb.jdbc.Driver"
 server:
   useForwardHeaders: true
-  #forward-headers-strategy: framework
+  forwardHeadersStrategy: framework
   tomcat:
     useRelativeRedirects: true
   servlet:
-    contextPath: /schoolhw
+    contextPath: /schoolshorts
   error:
     whitelabel:
       enabled: false
