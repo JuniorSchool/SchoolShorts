@@ -1,6 +1,6 @@
 # School Shorts
 A re-coding of the outdated "[SchoolHomework website](https://sourceforge.net/projects/schoolhomework/)" - a junior school home practice and games website, based on newer concepts microservices architecture and Jakarta EE.
-If you want to use this application then follow [the URL given in this section](## Deployed Instance URL) link.
+If you want to use this application then follow [the URL given in this section](#deployed-instance-url) link.
 
 ## Microservice Components (When completed)
 1. School Shorts - 
