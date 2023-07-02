@@ -1,8 +1,8 @@
 ## YAML Template.
 ---
-spring:
-  mvc:
-    staticPathPattern: /schoolshorts/**
+#spring:
+#  mvc:
+#    staticPathPattern: /schoolshorts/**
 #  datasource:
 #    url: "jdbc:mariadb://192.168.0.10:55408/schoolwebdb"
 #    username: "schoolwebuser"
