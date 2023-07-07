@@ -1,6 +1,6 @@
 # School Shorts
 A re-coding of the outdated "[SchoolHomework website](https://sourceforge.net/projects/schoolhomework/)" - a junior school home practice and games website, based on newer concepts microservices architecture and Jakarta EE.
-If you want to use this application then follow [the URL given in this section](##Deployed Instance URL) link.
+If you want to use this application then follow [the URL given in this section](#deployed-instance-url) link.
 
 ## Microservice Components (When completed)
 1. School Shorts - 
@@ -81,6 +81,6 @@ UserID: user\
 Password: password\
 
 ## Deployed Instance URL
-The current version of the application is deployed at the following URL. Please note that it is still under development, not all functionality is currently available.\
+The current version of the application is deployed at the following URL. Please note that it is still under development, not all functionality is currently available. If you want to use this application then follow the following link.\
 [https://andromedabay.ddns.net/schoolshorts/](https://andromedabay.ddns.net/schoolshorts/) \
 
