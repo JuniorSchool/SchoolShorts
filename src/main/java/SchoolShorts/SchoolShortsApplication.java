@@ -24,7 +24,14 @@ public class SchoolShortsApplication {
             bean.setLoadOnStartup(1);
             return bean;
         }        
-        
+
+        @Bean
+        public ServletRegistrationBean timesTable2ServletBean() {
+            ServletRegistrationBean bean = new ServletRegistrationBean(
+              new ServletTimesTable2(), "/ServletTimesTable2");
+            bean.setLoadOnStartup(1);
+            return bean;
+        }          
 
         /// Issue Reference link: https://github.com/spring-projects/spring-boot/issues/27801
         /// server.tomcat.use-relative-redirects=true was not being honored

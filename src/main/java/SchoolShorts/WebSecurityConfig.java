@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
 package SchoolShorts;
 
 
@@ -15,6 +16,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
+
+
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
@@ -26,8 +29,13 @@ public class WebSecurityConfig {
 				.requestMatchers("/", "home", "css/*",
                                         "favicon.ico",
                                         "login", "logout", "register", "js/*",
-                                        "pdf-js/*", "countingtable", "timestable",
-                                        "ServletPDFCountingTable",
+                                        "pdf-js/*", "countingtable", "gettimestableForm",
+                                        "ServletPDFCountingTable", "processtimestableForm*",
+                                        "/schoolshorts/processtimestableForm*",
+                                        "ServletTimesTable2*", "showPDFDocument*",
+                                        "viewer.html*", "../../ServletTimesTable2*",
+                                        "webpack://*", "data*",
+                                        "pdfViewer*",
                                         "randomtimestable", "/error"
                                         ).permitAll()
                                 

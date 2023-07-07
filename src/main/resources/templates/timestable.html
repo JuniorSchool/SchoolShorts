@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/baseLayout :: head(~{::title})"> 
+    <title>Times Tables Form</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div th:replace="fragments/baseLayout :: body(~{::#content})">
+
+        <div id="content">
+            <h3>Generate Straight Times Tables</h3>        
+         
+            <form name="TimesTable" action="#" th:action="@{/processtimestableForm}" th:object="${ttbean}" method="get">
+                <label for="sequence">Numbers to generate tables for (2,3,4,5 and 10 - Separate by comma)</label>
+                <input type="text" th:field="*{sequence}" size="50" />
+                <br/>
+                <p>Show Answers</p>
+                <span th:each="ans : ${allAnswers}">
+                    <input type="radio" th:field="*{answer}" th:value="${ans}" />
+                    <label th:for="${#ids.prev('answer')}" th:text="${ans}">Replacable Text</label>
+                </span>
+                <br/>
+              <br/>
+              <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>    
+    </div>
+</body>
+</html>
